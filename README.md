@@ -1,7 +1,5 @@
 # A\* Search w/ GUI
 
-![alt text](https://github.com/kinziemac/aStarUI/blob/master/Astar.png)
-
 #### Summary:
 
 This projects implements A\* search to determine the optimal path from a starting index to a goal index. The application is written in Python3 and uses the library "Tkinter" to create the program's GUI.
