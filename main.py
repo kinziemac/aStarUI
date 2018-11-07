@@ -16,13 +16,15 @@ def changeTileColor(row, column, color, sleepTime=1000.0):
     tk.Label(root, text=str(map[row][column]), background=color, borderwidth=3 ).grid(row=row,column=column)
 
 def closeThread():
-    time.sleep(4)
+    time.sleep(10)
     root.quit()
     sys.exit()
 
 def writePath(expandedList):
     pathList = []
     createPath(pathList, expandedList)
+    root.title("Found!")
+    time.sleep(2)
     for element in pathList:
         changeTileColor(element.y, element.x, '#FFD700', 250.0)
 
@@ -37,6 +39,8 @@ def aStarSearch():
     path = []
     presentIndex = Index(startIndex, goalIndex, None, boundary, map)
     openQueue.append(presentIndex)
+    time.sleep(3)
+    root.title("Searching..")
 
     # exit conditions
     atGoal = False
@@ -115,6 +119,7 @@ searchOutput = []
 searchCounter = 0
 
 root = tk.Tk()
+root.title("A* search")
 colors = ['#BBFFFF', '#b3e6ff', '#80d4ff', '#33bbff', '#00aaff', '#0077b3']
 
 for i in range(boundary):
