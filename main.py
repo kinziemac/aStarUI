@@ -4,7 +4,7 @@ import threading
 import sys
 
 from index import Index
-from search_inserts import aStarSortedInsert, bestFirstInsert, inExpandedList
+from search_inserts import aStarSortedInsert, inExpandedList
 from print_results import Printer
 from parse_data import *
 from index_checking import *
